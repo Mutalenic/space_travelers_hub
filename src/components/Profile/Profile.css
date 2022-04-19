@@ -1,0 +1,13 @@
+.profileContainer {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 12px;
+}
+
+.rightTable {
+  padding: 10px;
+}
+
+.leftTable {
+  padding: 10px;
+}
