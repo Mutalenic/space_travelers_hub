@@ -1,9 +1,8 @@
-import React from "react";
+import React from 'react';
 
 function Dragons() {
-    return (
-       <div>DragonsContents</div> 
-    )
-
+  return (
+    <div>DragonsContents</div>
+  );
 }
 export default Dragons;
