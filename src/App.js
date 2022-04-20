@@ -6,6 +6,8 @@ import Rockets from './components/Rockets/Rockets';
 import Navbar from './components/Navbar/Navbar';
 import Missions from './components/Missions/Missions';
 import Profile from './components/Profile/Profile';
+import Dragons from './Dragons/Dragons';
+
 import { missionsLoad } from './redux/Missions/Missions';
 
 const App = () => {
@@ -20,9 +22,11 @@ const App = () => {
         <Route path="/" element={<Rockets />} />
         <Route path="missions" element={<Missions />} />
         <Route path="profile" element={<Profile />} />
+        <Route path="dragons" element={<Dragons />} />
       </Routes>
     </div>
   );
 };
+
 
 export default App;
