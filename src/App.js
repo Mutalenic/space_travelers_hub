@@ -14,7 +14,10 @@ import { addRockets } from './redux/Rockets/rockets';
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(addRockets(), missionsLoad());
+    dispatch(addRockets());
+  }, []);
+  useEffect(() => {
+    dispatch(missionsLoad());
   }, []);
 
   return (
