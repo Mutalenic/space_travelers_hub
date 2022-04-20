@@ -1,54 +1,52 @@
-const ADD_ROCKETS = 'space_travelers_hub/rockets/GET_ROCKETS';
-const RESERVE_ROCKETS_TOGGLE = 'space_travelers_hub/rockets/RESERVE_ROCKETS_TOGGLE';
-const rocketsAPI = 'https://api.spacexdata.com/v3/rockets';
+// import { type } from '@testing-library/user-event/dist/type';
+// import { wait } from '@testing-library/user-event/dist/utils';
+import { loadRockets } from '../apiFunctions';
 
-const initialState = [];
+const ADD_ROCKETS = 'space_travelers_hub/rockets/ADD_ROCKETS';
+const ROCKETS_ADDED = 'space_travelers_hub/rockets/ROCKETS_ADDED';
+const ROCKETS_FAILED = 'space_travelers_hub/rockets/ROCKETS_FAILED';
 
-const toggleReserve = (payload) => ({
-  type: RESERVE_ROCKETS_TOGGLE,
-  payload,
-});
-
-const addRockets = () => async (dispatch) => {
-  try {
-    const fetchRocketData = await fetch(rocketsAPI);
-    const rocketData = await fetchRocketData.json();
-    dispatch({
-      type: ADD_ROCKETS,
-      payload: rocketData.map((rocket) => ({
-        rocketId: rocket.id,
-        rocketName: rocket.rocket_name,
-        rocketDescription: rocket.description,
-        rocketImage: rocket.flickr_images[0],
-        rocketReserved: false,
-      })),
-
-    });
-  } catch (error) { throw new Error(error); }
+export const addRockets = () => (dispatch) => {
+  dispatch({
+    type: ADD_ROCKETS,
+  });
+  loadRockets().then((results) => dispatch({
+    type: ROCKETS_ADDED,
+    payload: results,
+  })).catch((error) => dispatch({
+    type: ROCKETS_FAILED,
+    payload: error,
+  }));
 };
 
-const rocketsReducer = (state = initialState, action) => {
+const initialState = {
+  rockets: [],
+};
+
+export const rocketsReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_ROCKETS:
-    { return [
-      ...action.payload,
-    ]; }
+      return {
+        ...state,
+        error: '',
+        wait: true,
+      };
 
-    case RESERVE_ROCKETS_TOGGLE: {
-      const newState = state.map((rocket) => {
-        if (rocket.rocketId.toString() !== action.payload.id) {
-          return rocket;
-        }
-        return { ...rocket, rocketReserved: !rocket.rocketReserved };
-      });
-      return [...newState];
-    }
+    case ROCKETS_ADDED:
+      return {
+        ...state,
+        rockets: [...state.rockets, ...action.payload],
+        wait: false,
+      };
+
+    case ROCKETS_FAILED:
+      return {
+        ...state,
+        error: action.payload,
+        wait: false,
+      };
+
     default:
       return state;
   }
 };
-export {
-  addRockets, toggleReserve,
-};
-
-export default rocketsReducer;

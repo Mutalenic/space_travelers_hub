@@ -2,7 +2,7 @@
 
 # Space Traveler's Hub
 
-In this project we fetched data form the rockets the Rockets endpoint API.
+In this project we displayed rockets data from the rockets endpoint API.
 
 ## Built With
 
