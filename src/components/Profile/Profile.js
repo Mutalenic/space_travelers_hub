@@ -1,38 +1,30 @@
+import { useSelector } from 'react-redux';
 import './Profile.css';
 
-const Profile = () => (
-  <div className="profileContainer">
-    <div className="rightTable">
-      <h2>My Missions</h2>
-      <table>
-        <tr>
-          <th>TESLA</th>
-        </tr>
-        <tr>
-          <th>AsiaSat</th>
-        </tr>
-        <tr>
-          <td>SES</td>
-        </tr>
-      </table>
+const Profile = () => {
+  const missionsJoined = useSelector(
+    (state) => state.missionsReducer.missions.filter((mission) => mission.reserved === true),
+  );
+  return (
+    <div>
+      <div className="profileContainer">
+        <h2 className="leftprof-heading">My Missions</h2>
+        <table className="leftTable">
+          {
+        missionsJoined.length
+          ? missionsJoined.map((mission) => (
 
+            <td key={mission.id}>
+              <p>{mission.name}</p>
+            </td>
+
+          ))
+          : <p>You have not joined any mission yet.</p>
+       }
+        </table>
+      </div>
     </div>
-    <div className="leftTable">
-      <h2>My Rockets</h2>
-      <table>
-        <tr>
-          <th>Falcon 9</th>
-        </tr>
-        <tr>
-          <th>StarShip</th>
-        </tr>
-        <tr>
-          <td>Falcon heavy</td>
-        </tr>
-      </table>
+  );
+};
 
-    </div>
-  </div>
-
-);
 export default Profile;
