@@ -1,13 +1,15 @@
-.profileContainer {
-  display: grid;
-  grid-template-columns: 2fr 2fr;
-  gap: 12px;
-}
-
 .rightTable {
   padding: 10px;
 }
 
+.leftprof-heading {
+  padding: 2rem 2rem 5px 2rem;
+}
+
 .leftTable {
-  padding: 10px;
+  border-collapse: collapse;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
 }

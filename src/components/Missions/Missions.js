@@ -28,8 +28,6 @@ const Missions = () => {
               {mission.reserved
                 ? <td><button type="button" className="leave-btn" onClick={() => dispatch(leaveMission(mission.id))}>Leave Mission</button></td>
                 : <td><button type="button" className="join-btn" onClick={() => dispatch(joinMission(mission.id))}>Join Mission</button></td>}
-              {' '}
-
             </tr>
           ))}
         </tbody>
