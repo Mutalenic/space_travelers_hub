@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable max-len */
-import loadMissions from '../apiFunctions';
+import { loadMissions } from '../apiFunctions';
 
 const LOAD_MISSIONS = 'space-travelers-hub/Missions/LOAD_MISSIONS';
 const MISSIONS_LOADED = 'space-travelers-hub/Missions/MISSIONS_LOADED';
