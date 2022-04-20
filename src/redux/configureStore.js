@@ -5,9 +5,9 @@ import rocketsReducer from './Rockets/rockets';
 import missionsReducer from './Missions/Missions';
 
 const rootReducer = combineReducers({
-    rocketsReducer,
-     missionsReducer,
-    });
+  rocketsReducer,
+  missionsReducer,
+});
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
 
 export default store;

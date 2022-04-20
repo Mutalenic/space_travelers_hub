@@ -1,5 +1,4 @@
 /* eslint-disable max-len */
-const rocketsAPI = 'https://api.spacexdata.com/v3/rockets';
 const missions = 'https://api.spacexdata.com/v3/missions';
 
 // export const loadRockets = async () => {
