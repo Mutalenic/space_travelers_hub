@@ -2,7 +2,7 @@
 
 # Space Traveler's Hub
 
-In this project we created a basic structure for Rockets - Setup
+In this project we fetched data form the rockets the Rockets endpoint API.
 
 ## Built With
 
