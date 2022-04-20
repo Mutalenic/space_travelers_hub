@@ -11,3 +11,27 @@ a {
   text-decoration: underline;
   color: goldenrod;
 }
+
+.logo {
+  width: 3rem;
+}
+
+.left {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  padding: 2.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 99vw;
+  margin: auto;
+  border-bottom: 1px solid gray;
+}
