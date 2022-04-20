@@ -17,3 +17,17 @@ td {
   max-width: 50vw;
   padding: 2rem;
 }
+
+.invisible {
+  visibility: hidden;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: silver;
+  color: black;
+}
+
+tbody tr:nth-child(even) {
+  background-color: gray;
+  color: aliceblue;
+}
