@@ -41,6 +41,15 @@ tbody tr:nth-child(even) {
   border-radius: 1rem;
 }
 
+.active-btn {
+  background-color: green;
+  color: #fff;
+  width: 150px;
+  padding: 1px;
+  margin: 50px auto;
+  border-radius: 1rem;
+}
+
 .join-btn {
   width: 150px;
   height: 50px;
