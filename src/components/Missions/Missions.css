@@ -31,3 +31,28 @@ tbody tr:nth-child(even) {
   background-color: gray;
   color: aliceblue;
 }
+
+.member-btn {
+  background-color: #828990;
+  color: #fff;
+  width: 150px;
+  padding: 1px;
+  margin: 50px auto;
+  border-radius: 1rem;
+}
+
+.join-btn {
+  width: 150px;
+  height: 50px;
+  padding: 0;
+  margin: 50px auto;
+}
+
+.leave-btn {
+  width: 150px;
+  height: 50px;
+  padding: 0;
+  margin: 50px auto;
+  color: red;
+  border: 1px solid red;
+}
