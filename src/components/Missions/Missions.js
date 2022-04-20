@@ -1,33 +1,33 @@
+import { useSelector } from 'react-redux';
 import './Missions.css';
 
-const Missions = () => (
+const Missions = () => {
+  const allMissions = useSelector((state) => state.missionsReducer.missions);
+  return (
 
-  <div className="mission-table">
-    <table>
-      <thead>
-        <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>Thaicom</th>
-          <td>
-            iuahawuiduaghduahduiawdid udauuu
-            iwidasdiudisdiads thuisdbis dummy text to occupy the space
-            . you dont ahve to understand whats writen here but just pretend
-            that you do.
-
-          </td>
-          <td>
-            <button type="button">Join Mission</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-);
+    <div className="mission-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th className="invisible">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {allMissions.map((mission) => (
+            <tr key={mission.id}>
+              <td><b>{mission.name}</b></td>
+              <td>{mission.description}</td>
+              <td><button type="button" className="member-btn">Not a Member</button></td>
+              <td><button type="button" className="join-btn">Join Mission</button></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
 
 export default Missions;

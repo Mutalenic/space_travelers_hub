@@ -12,8 +12,22 @@ table {
 
 th,
 td {
-  border: 1px solid black;
+  border: 3px solid rgba(167, 160, 160, 0.312);
   text-align: left;
-  max-width: 150px;
+  max-width: 50vw;
   padding: 2rem;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: silver;
+  color: black;
+}
+
+tbody tr:nth-child(even) {
+  background-color: gray;
+  color: aliceblue;
 }

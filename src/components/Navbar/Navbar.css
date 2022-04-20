@@ -11,3 +11,31 @@ a {
   text-decoration: underline;
   color: goldenrod;
 }
+
+.logo {
+  width: 3rem;
+}
+
+.left {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  padding: 2.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 99vw;
+  margin: auto;
+  border-bottom: 1px solid gray;
+  box-shadow: 0 5px 5px rgba(218, 165, 32, 0.41);
+  position: sticky;
+  top: 0;
+  background-color: aliceblue;
+}
