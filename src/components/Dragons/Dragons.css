@@ -1,0 +1,29 @@
+.dragonCard {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 42px;
+    padding: 10px 30px 20px 20px;
+}
+
+.dragonImage {
+    width: 400px;
+    border-radius: 4px;
+}
+
+.reservation {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: rgb(58, 58, 184);
+    border: transparent;
+    color: rgb(206, 216, 212);
+}
+
+.dragonItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 62px;
+}

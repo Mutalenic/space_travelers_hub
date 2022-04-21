@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import './Dragons.css';
 
 const Dragons = () => {
   const dragons = useSelector((state) => state.dragonsReducer.dragons);
@@ -9,16 +10,15 @@ const Dragons = () => {
           id, name, type, images,
         } = dragon;
         return (
-          <div key={id}>
-            <img src={images} alt="dragon" />
-            <div>
+          <div key={id} className="dragonCard">
+            <img src={images} alt="dragon" className="dragonImage" />
+            <div className="dragonItems">
               <h3>{name}</h3>
               <p>
                 {' '}
                 {type}
               </p>
-              <button type="button">Cancel Reservation</button>
-              <button type="button">Reserve Dragon</button>
+              <button type="button" className="reservation">Reserve Dragon</button>
             </div>
           </div>
         );
