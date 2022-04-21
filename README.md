@@ -2,7 +2,7 @@
 
 # Space Traveler's Hub
 
-In this project when a a user clicks on Rockets that have already been reserved a "Reserved" badge is displayed and "Cancel reservation" button instead of the default "Reserve rocket".
+In this project when a user clicks on Rockets that have already been reserved a "Reserved" badge is displayed and "Cancel reservation" button instead of the default "Reserve rocket".
 
 ## Built With
 
