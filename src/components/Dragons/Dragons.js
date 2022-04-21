@@ -5,7 +5,6 @@ const Dragons = () => {
   return (
     <div>
       {dragons.map((dragon) => {
-        console.log(dragon);
         const {
           id, name, description, image, reserved,
         } = dragon;
