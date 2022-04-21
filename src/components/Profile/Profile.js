@@ -7,7 +7,7 @@ const Profile = () => {
   );
   return (
     <div>
-      <div className="profileContainer">
+      <div>
         <h2 className="leftprof-heading">My Missions</h2>
         <table className="leftTable">
           {
