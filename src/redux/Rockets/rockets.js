@@ -6,6 +6,7 @@ const ADD_ROCKETS = 'space_travelers_hub/rockets/ADD_ROCKETS';
 const ROCKETS_ADDED = 'space_travelers_hub/rockets/ROCKETS_ADDED';
 const ROCKETS_FAILED = 'space_travelers_hub/rockets/ROCKETS_FAILED';
 const BOOK_ROCKET = 'space_travelers_hub/rockets/BOOK_ROCKET';
+const CANCEL_ROCKET = 'space_travelers_hub/rockets/CANCEL_ROCKET';
 
 export const addRockets = () => (dispatch) => {
   dispatch({
@@ -22,6 +23,11 @@ export const addRockets = () => (dispatch) => {
 
 export const bookRocket = (payload) => ({
   type: BOOK_ROCKET,
+  payload,
+});
+
+export const cancelRocket = (payload) => ({
+  type: CANCEL_ROCKET,
   payload,
 });
 
@@ -53,6 +59,18 @@ export const rocketsReducer = (state = initialState, action) => {
       };
 
     case BOOK_ROCKET:
+    {
+      const newState = state.rockets.map((rocket) => {
+        if (rocket.id !== action.payload) return rocket;
+        return { ...rocket, reserved: true };
+      });
+      return {
+        ...state,
+        rockets: [...newState],
+      };
+    }
+
+    case CANCEL_ROCKET:
     {
       const newState = state.rockets.map((rocket) => {
         if (rocket.id !== action.payload) return rocket;

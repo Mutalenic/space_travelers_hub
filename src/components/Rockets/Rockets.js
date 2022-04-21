@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import './Rockets.css';
-import { bookRocket } from '../../redux/Rockets/rockets';
+import { bookRocket, cancelRocket } from '../../redux/Rockets/rockets';
 
 const Rockets = () => {
   const rockets = useSelector((state) => state.rocketsReducer.rockets);
@@ -27,7 +27,7 @@ const Rockets = () => {
                 {description}
               </p>
               {reserved ? (
-                <button type="button" className="cancel-book">
+                <button type="button" className="cancel-book" onClick={() => dispatch(cancelRocket(rocket.id))}>
                   Cancel Reservation
                 </button>
               ) : (
