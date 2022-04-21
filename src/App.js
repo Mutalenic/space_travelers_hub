@@ -5,11 +5,12 @@ import { useDispatch } from 'react-redux';
 import Navbar from './components/Navbar/Navbar';
 import Missions from './components/Missions/Missions';
 import Profile from './components/Profile/Profile';
-import Dragons from './Dragons/Dragons';
+import Dragons from './components/Dragons/Dragons';
 
-import { missionsLoad } from './redux/Missions/Missions';
-import Rockets from './components/Rockets/Rockets';
 import { addRockets } from './redux/Rockets/rockets';
+import Rockets from './components/Rockets/Rockets';
+import { missionsLoad } from './redux/Missions/Missions';
+import { addDragons } from './redux/Dragons/Dragons';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -18,6 +19,9 @@ const App = () => {
   }, []);
   useEffect(() => {
     dispatch(missionsLoad());
+  }, []);
+  useEffect(() => {
+    dispatch(addDragons());
   }, []);
 
   return (
