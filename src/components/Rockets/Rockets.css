@@ -16,3 +16,7 @@
   height: 150px;
   width: 200px;
 }
+.reserved{
+  background-color: green;
+  color: #fff;
+}

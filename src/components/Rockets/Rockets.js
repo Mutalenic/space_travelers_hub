@@ -19,7 +19,7 @@ const Rockets = () => {
               <h3>{name}</h3>
               <p className="reserve-sect">
                 {reserved === true && (
-                <span className="reverved">
+                <span className="reserved">
                   Reserved
                 </span>
                 )}
