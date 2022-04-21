@@ -19,5 +19,24 @@
 
 .reserved {
   background-color: green;
+  padding: 1%;
   color: #fff;
+  border-radius: 2px;
+}
+
+.reserveBtn {
+  border-style: none;
+  background-color: blue;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.cancel-book {
+  background-color: #fff;
+  color: #000;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: fit-content;
 }
