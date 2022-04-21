@@ -2,7 +2,7 @@
 
 # Space Traveler's Hub
 
-In this project we displayed rockets data from the rockets endpoint API.
+In this project when a user clicks the "Reserve rocket" button,an  action is dispatched to update the store.
 
 ## Built With
 
