@@ -36,10 +36,10 @@ const loadDragons = async () => {
   const respond = await fetch(dragonData).then((res) => res.json()).then((GetDragons) => GetDragons);
   const dragonsItems = respond.map((dragon) => (
     {
-      id: dragon.dragon_id,
-      name: dragon.dragon_name,
-      description: dragon.description,
-      image: dragon.flickr_images[0],
+      id: dragon.id,
+      name: dragon.name,
+      type: dragon.type,
+      images: dragon.flickr_images[0],
     }
   ));
   return dragonsItems;

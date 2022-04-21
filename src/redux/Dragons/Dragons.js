@@ -35,7 +35,7 @@ export const dragonsReducer = (state = initialState, action) => {
     case DRAGONS_ADDED:
       return {
         ...state,
-        dragons: [...state.rockets, ...action.payload],
+        dragons: [...state.dragons, ...action.payload],
         wait: false,
       };
 

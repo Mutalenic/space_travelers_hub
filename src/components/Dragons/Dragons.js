@@ -6,31 +6,19 @@ const Dragons = () => {
     <div>
       {dragons.map((dragon) => {
         const {
-          id, name, description, image, reserved,
+          id, name, type, images,
         } = dragon;
         return (
           <div key={id}>
-            <img src={image} alt="dragon" />
+            <img src={images} alt="dragon" />
             <div>
               <h3>{name}</h3>
               <p>
-                {reserved === true && (
-                <span>
-                  Reserved
-                </span>
-                )}
                 {' '}
-                {description}
+                {type}
               </p>
-              {reserved ? (
-                <button type="button">
-                  Cancel Reservation
-                </button>
-              ) : (
-                <button type="button">Reserve Dragon</button>
-
-              )}
-
+              <button type="button">Cancel Reservation</button>
+              <button type="button">Reserve Dragon</button>
             </div>
           </div>
         );
