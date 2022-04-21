@@ -1,7 +1,11 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import './Rockets.css';
+import { bookRocket } from '../../redux/Rockets/rockets';
 
 const Rockets = () => {
   const rockets = useSelector((state) => state.rocketsReducer.rockets);
+  const dispatch = useDispatch();
+
   return (
     <div className="rocket">
       {rockets.map((rocket) => {
@@ -27,7 +31,7 @@ const Rockets = () => {
                   Cancel Reservation
                 </button>
               ) : (
-                <button className="reserveBtn" type="button">Reserve Rocket</button>
+                <button className="reserveBtn" type="button" onClick={() => dispatch(bookRocket(rocket.id))}>Reserve Rocket</button>
 
               )}
 
