@@ -1,18 +1,18 @@
 .rocket {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 1rem;
-    margin-left: 10rem;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+  margin-left: 10rem;
+}
 
-  .perRocket {
-        display: flex;
-        gap: 5px;
-        align-items: center;
-      }
-  
-      .rocket-image {
-        height: 150px;
-        width: 200px;
-      }
+.perRocket {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.rocket-image {
+  height: 150px;
+  width: 200px;
+}
