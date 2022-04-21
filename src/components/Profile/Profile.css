@@ -10,15 +10,10 @@ td {
 }
 
 .missionContainer {
-  width: 50%;
+  width: 30%;
 }
-
-p {
-  width: max-content;
-}
-
 .rocketContainer {
-  width: 50%;
+  width: 30%;
 }
 
 .leftprof-heading {
