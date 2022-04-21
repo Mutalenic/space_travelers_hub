@@ -3,7 +3,7 @@
     grid-template-columns: auto auto;
     justify-content: flex-start;
     align-items: center;
-    gap: 42px;
+    gap: 22px;
     padding: 10px 30px 20px 20px;
 }
 
@@ -23,7 +23,7 @@
 .dragonItems {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 62px;
+    gap: 32px;
 }
