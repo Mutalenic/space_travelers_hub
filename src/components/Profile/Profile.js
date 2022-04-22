@@ -59,7 +59,7 @@ const Profile = () => {
             </td>
 
           ))
-          : <p>You have not reserved any rocket yet.</p>
+          : <p>You have not reserved any dragon yet.</p>
        }
           </table>
 
