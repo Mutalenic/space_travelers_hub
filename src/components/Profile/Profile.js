@@ -8,6 +8,9 @@ const Profile = () => {
   const bookRockets = useSelector(
     (state) => state.rocketsReducer.rockets.filter((rocket) => rocket.reserved === true),
   );
+  const reserveDragons = useSelector(
+    (state) => state.dragonsReducer.dragons.filter((dragon) => dragon.reserved === true),
+  );
   return (
     <div>
       <div className="profileContainer">
@@ -43,6 +46,23 @@ const Profile = () => {
           : <p>You have not reserved any rocket yet.</p>
        }
           </table>
+        </div>
+        <div className="dragonContainer">
+          <h2 className="rightprof-heading">My Dragons</h2>
+          <table className="rightTable">
+            {
+        reserveDragons.length
+          ? reserveDragons.map((dragon) => (
+
+            <td key={dragon.id}>
+              <p>{dragon.name}</p>
+            </td>
+
+          ))
+          : <p>You have not reserved any rocket yet.</p>
+       }
+          </table>
+
         </div>
       </div>
     </div>
