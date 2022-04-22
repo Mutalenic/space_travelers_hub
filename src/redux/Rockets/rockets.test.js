@@ -1,5 +1,7 @@
 import '@testing-library/jest-dom';
-import { addRockets, bookRocket, cancelRocket, rocketsReducer } from './rockets';
+import {
+  addRockets, bookRocket, cancelRocket, rocketsReducer,
+} from './rockets';
 
 describe('fetchRockets', () => {
   test('test fetchRocket function', () => {
@@ -48,10 +50,11 @@ describe('rocketsReducer', () => {
   test('test rocketsReducer add rockets', () => {
     const state = {
       rockets: [
-        { id: '1', name: 'rocket 1', description: 'description 1', reserved: true, },
-        { id: '2', name: 'rocket 2', description: 'description 2' },
         {
-          id: '3', name: 'rocket 3', description: 'description 3',},
+          id: '1', name: 'rocket 1', description: 'description 1', reserved: true,
+        },
+        { id: '2', name: 'rocket 2', description: 'description 2' },
+        { id: '3', name: 'rocket 3', description: 'description 3' },
       ],
     };
     const action = {
@@ -64,13 +67,13 @@ describe('rocketsReducer', () => {
 
   test('test rocketsReducer cancel rocket', () => {
     const state = {
-        rockets: [
-            { id: '1', name: 'rocket 1', description: 'description 1',},
-            { id: '2', name: 'rocket 2', description: 'description 2' },
-            {
-              id: '3', name: 'rocket 3', description: 'description 3', reserved: true,
-            },
-          ],
+      rockets: [
+        { id: '1', name: 'rocket 1', description: 'description 1' },
+        { id: '2', name: 'rocket 2', description: 'description 2' },
+        {
+          id: '3', name: 'rocket 3', description: 'description 3', reserved: true,
+        },
+      ],
     };
     const action = {
       type: 'space_travelers_hub/rockets/CANCEL_ROCKET',
