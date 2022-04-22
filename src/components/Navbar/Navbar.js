@@ -18,10 +18,10 @@ const Navbar = () => (
           <NavLink to="missions">Missions</NavLink>
         </li>
         <li>
-          <NavLink to="profile">Profile</NavLink>
+          <NavLink to="dragons">Dragons</NavLink>
         </li>
         <li>
-          <NavLink to="dragons">Dragons</NavLink>
+          <NavLink to="profile">Profile</NavLink>
         </li>
       </ul>
     </nav>
