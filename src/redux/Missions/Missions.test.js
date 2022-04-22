@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom';
 import missionReducer, { missionsLoad, joinMission, leaveMission } from './Missions';
 
-describe('fetchMission', () => {
-  test('test fetchMission function', () => {
+describe('loadMissions', () => {
+  test('test loadMissions function', () => {
     const result = missionsLoad();
     expect(typeof result).toBe('function');
   });
