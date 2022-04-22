@@ -5,6 +5,8 @@ import { loadDragons } from '../apiFunctions';
 const ADD_DRAGONS = 'space_travelers_hub/Dragons/ADD_DRAGONS';
 const DRAGONS_ADDED = 'space_travelers_hub/Dragons/DRAGONS_ADDED';
 const DRAGONS_FAILED = 'space_travelers_hub/Dragons/DRAGONS_FAILED';
+const RESERVE_DRAGONS = 'space_travelers_hub/Dragons/RESERVE_DRAGONS';
+const CANCEL_DRAGONS = 'space_travelers_hub/Dragons/CANCEL_DRAGONS';
 
 export const addDragons = () => (dispatch) => {
   dispatch({
@@ -18,6 +20,16 @@ export const addDragons = () => (dispatch) => {
     payload: error,
   }));
 };
+
+export const reserveDragons = (payload) => ({
+  type: RESERVE_DRAGONS,
+  payload,
+});
+
+export const cancelDragons = (payload) => ({
+  type: CANCEL_DRAGONS,
+  payload,
+});
 
 const initialState = {
   dragons: [],
@@ -45,6 +57,30 @@ export const dragonsReducer = (state = initialState, action) => {
         error: action.payload,
         wait: false,
       };
+
+    case RESERVE_DRAGONS:
+    {
+      const newState = state.dragons.map((dragon) => {
+        if (dragon.id !== action.payload) return dragon;
+        return { ...dragon, reserved: true };
+      });
+      return {
+        ...state,
+        dragons: [...newState],
+      };
+    }
+
+    case CANCEL_DRAGONS:
+    {
+      const newState = state.dragons.map((dragon) => {
+        if (dragon.id !== action.payload) return dragon;
+        return { ...dragon, reserved: false };
+      });
+      return {
+        ...state,
+        dragons: [...newState],
+      };
+    }
 
     default:
       return state;
