@@ -4,19 +4,21 @@
   gap: 2rem;
   margin-top: 1rem;
   margin-left: 1rem;
+  margin-bottom: 2rem;
   width: fit-content;
 }
 
 .perRocket {
   display: flex;
-  gap: 10px;
-  align-items: center;
+  gap: 1rem;
+  align-items: flex-start;
+  margin: 0 2rem;
 }
 
 .rocket-des {
   display: flex;
   flex-direction: column;
-  padding-bottom: 0.75rem;
+  padding: 0 2rem 1rem 1rem;
 }
 
 .rocket-image {
@@ -25,26 +27,29 @@
 }
 
 .reserved {
-  background-color: green;
+  background-color: rgb(0, 122, 128);
   color: #fff;
-  padding: 0 2px;
-  border-radius: 2px;
+  padding: 0 5px;
+  border-radius: 5px;
+  font-size: 12px;
 }
 
 .reserveBtn {
   border-style: none;
-  background-color: blue;
+  background-color: rgb(0, 119, 255);
   color: #fff;
   padding: 0.5rem;
+  margin-top: 1rem;
   border-radius: 5px;
   width: fit-content;
 }
 
 .cancel-book {
   background-color: #fff;
-  color: #000;
+  color: rgba(0, 0, 0, 0.349);
   padding: 0.5rem;
+  border: 1px solid gray;
   border-radius: 5px;
-  margin-top: 2px;
+  margin-top: 1rem;
   width: fit-content;
 }
