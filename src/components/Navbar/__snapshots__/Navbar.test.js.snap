@@ -42,17 +42,17 @@ Object {
             <li>
               <a
                 class=""
-                href="/profile"
+                href="/dragons"
               >
-                Profile
+                Dragons
               </a>
             </li>
             <li>
               <a
                 class=""
-                href="/dragons"
+                href="/profile"
               >
-                Dragons
+                Profile
               </a>
             </li>
           </ul>
@@ -98,17 +98,17 @@ Object {
           <li>
             <a
               class=""
-              href="/profile"
+              href="/dragons"
             >
-              Profile
+              Dragons
             </a>
           </li>
           <li>
             <a
               class=""
-              href="/dragons"
+              href="/profile"
             >
-              Dragons
+              Profile
             </a>
           </li>
         </ul>
