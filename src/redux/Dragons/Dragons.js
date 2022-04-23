@@ -1,5 +1,3 @@
-// import { type } from '@testing-library/user-event/dist/type';
-// import { wait } from '@testing-library/user-event/dist/utils';
 import { loadDragons } from '../apiFunctions';
 
 const ADD_DRAGONS = 'space_travelers_hub/Dragons/ADD_DRAGONS';

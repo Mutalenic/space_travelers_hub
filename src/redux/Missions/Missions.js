@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable max-len */
 import { loadMissions } from '../apiFunctions';
 
 const LOAD_MISSIONS = 'space-travelers-hub/Missions/LOAD_MISSIONS';
@@ -10,7 +8,8 @@ const LEAVE_MISSION = 'space-traveler/Missions/LEAVE_MISSION';
 
 export const missionsLoad = () => (dispatch) => {
   dispatch({ type: LOAD_MISSIONS });
-  loadMissions().then((result) => dispatch({ type: MISSIONS_LOADED, payload: result })).catch((error) => dispatch({ type: LOAD_MISSIONS_FAILED, payload: error }));
+  loadMissions().then((result) => dispatch({ type: MISSIONS_LOADED, payload: result }))
+    .catch((error) => dispatch({ type: LOAD_MISSIONS_FAILED, payload: error }));
 };
 export const joinMission = (id) => ({
   type: JOIN_MISSION,

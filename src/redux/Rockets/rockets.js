@@ -1,5 +1,3 @@
-// import { type } from '@testing-library/user-event/dist/type';
-// import { wait } from '@testing-library/user-event/dist/utils';
 import { loadRockets } from '../apiFunctions';
 
 const ADD_ROCKETS = 'space_travelers_hub/rockets/ADD_ROCKETS';
