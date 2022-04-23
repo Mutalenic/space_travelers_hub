@@ -1,0 +1,46 @@
+.profileContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+td {
+  border: 3px solid rgba(167, 160, 160, 0.312);
+  text-align: left;
+  max-width: 50vw;
+}
+
+.missionContainer {
+  width: 33%;
+}
+
+.rocketContainer {
+  width: 33%;
+}
+
+.dragonContainer {
+  width: 33%;
+}
+
+.leftprof-heading {
+  padding: 2rem 2rem 5px 2rem;
+}
+
+.leftTable {
+  border-collapse: collapse;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+.rightprof-heading {
+  padding: 2rem 2rem 5px 2rem;
+}
+
+.rightTable {
+  border-collapse: collapse;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
